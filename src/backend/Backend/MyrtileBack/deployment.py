@@ -25,7 +25,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'https://freelancefantasy-backend-dfbte3d4f0csd5bc.scm.westus-01.azurewebsites.net',
-    'https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net'
+    'https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net',
+    'white-meadow-0781a221e.5.azurestaticapps.net',
 ]
 
 
