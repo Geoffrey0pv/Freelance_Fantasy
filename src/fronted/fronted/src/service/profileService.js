@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BASE_API_URL } from './apiconfig';
+import { BASE_API_URL } from './apiConfig';
 
 // Servicio para obtener el perfil completo del usuario
 export const getProfileService = async (token) => {

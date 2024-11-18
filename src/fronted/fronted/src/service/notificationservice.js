@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BASE_API_URL } from './apiconfig';
+import { BASE_API_URL } from './apiConfig';
 
 
 const API_URL = `${BASE_API_URL}/notifications/`;

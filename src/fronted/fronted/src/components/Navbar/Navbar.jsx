@@ -67,7 +67,7 @@ const Navbar = () => {
           <ul className="flex flex-col items-center justify-center h-full space-y-6 md:flex-row md:space-y-0 md:space-x-6 md:h-auto text-center">
             <li>
               <NavLink
-                to="/home"
+                to="/"
                 onClick={closeNavbar}
                 className={({ isActive }) =>
                   `block px-4 py-2 md:inline-block ${
