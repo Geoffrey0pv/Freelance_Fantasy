@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF6F28C2-B7B4-7343-8EF8-6B1BB0A41AEA" name="STATE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>765A6502-D706-ADC2-4607-89CA8F308CCA</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_state_milestone" id="4AFE8A02-F492-A808-F570-DEBEB63EAA41">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>9DF6B141-3B27-5AA4-EADA-924E910A144F</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="state" id="7498710F-2938-68DD-6716-8300409EBFF7">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>D03E7E8F-784B-A6EA-2D05-1B84F76F112B</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="21005368-9008-5E72-C5C8-EE24ED8ECEA1" name="STATE_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>2E89B21D-A565-2707-3C56-ABC12E544224</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4AFE8A02-F492-A808-F570-DEBEB63EAA41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

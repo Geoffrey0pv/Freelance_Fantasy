@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="10CDB272-C5AA-F0ED-B92B-6387C74FCFE4" name="MESSAGE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:37:23 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_message" id="FDA5855C-0FF3-7F81-03EA-136A3F020863">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:37:29 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="encrypted_content" id="E6F25AB7-421D-E3EE-B0B2-FFC46FAD1E91">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:37:50 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1200 CHAR</dataTypeSize>
+<ownDataTypeParameters>1200 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_and_time_message" id="ED895F3F-D28F-87FE-0DB4-93140B2745EE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:38:49 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User" id="D70782B8-5E7A-E1F0-A6F7-062BFD389998">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:40:02 UTC</createdTime>
+<generatorID>64C7D128-3B1F-75FD-84D2-06F8432E91E3</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>C4C77025-15BC-EC5C-38E2-FE4759BA38D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User1" id="03DC5A5E-B917-082D-270B-6DB3D4BBA44F">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:14:44 UTC</createdTime>
+<generatorID>46426C82-4CF7-2F41-E82E-24748F5F5AE6</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>C4C77025-15BC-EC5C-38E2-FE4759BA38D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EF2B3708-D5EE-5028-4333-329D80E5D12D" name="MESSAGE PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:38:31 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FDA5855C-0FF3-7F81-03EA-136A3F020863</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

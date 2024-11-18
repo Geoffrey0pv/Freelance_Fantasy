@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A6C3CF48-0DF5-88A9-2FCF-EEE09A8F6FC7" containerWithKeyObject="C9D12FFA-66AC-6B14-C930-146B6BB872ED" localFKIndex="E064B6E4-CBB4-A497-9B5C-60DE2F1EF5F7" name="MILESTONE_PROJECT_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>05278EF0-C090-18F5-B9A3-C848ACDBE498</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<referredTableLongName>PROJECT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>278EF717-CD54-6A97-23E5-5F01D955CF9D</referredTableID>
+<keyObject>7A8DFAEB-5769-9FF2-8996-89312161E7B8</keyObject>
+<referredKeyID>7A8DFAEB-5769-9FF2-8996-89312161E7B8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_project</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKArc class="oracle.dbtools.crest.model.design.relational.FKArc" directorySegmentName="seg_0" id="682221A5-ED5D-6552-2F1E-A9CF10F173E1" name="FKArc_1">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<mandatory>false</mandatory>
+<reverseArc>true</reverseArc>
+<table>2BDB7AFE-C9C7-8E40-2F31-629B776A2E74</table>
+<fkeys>
+<fkeyID>8ED1B7EA-91A2-C960-98FE-E44FD7702785</fkeyID>
+<fkeyID>D1491B74-AE02-9D99-DBF2-743921C89751</fkeyID>
+</fkeys>
+</FKArc>

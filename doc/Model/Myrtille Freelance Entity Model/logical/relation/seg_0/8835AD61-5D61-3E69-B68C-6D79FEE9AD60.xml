@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TASK STATE" directorySegmentName="seg_0" id="8835AD61-5D61-3E69-B68C-6D79FEE9AD60">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:34:21 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>2E89B21D-A565-2707-3C56-ABC12E544224</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Puede tener varias</nameOnSource>
+<nameOnTarget>tiene un solo</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>765A6502-D706-ADC2-4607-89CA8F308CCA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2C8EB500-7240-9AC7-F1B3-42C55DFAAD68</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

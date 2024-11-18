@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STATE - MILESTONE" directorySegmentName="seg_0" id="CBDD7BCD-DD0E-8544-86C8-1336651C87F0">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:17:20 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>2E89B21D-A565-2707-3C56-ABC12E544224</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>puede tener varios</nameOnSource>
+<nameOnTarget>tiene un</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>765A6502-D706-ADC2-4607-89CA8F308CCA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6ACAC32-5CD7-2E65-28DC-4913DAB59B81</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

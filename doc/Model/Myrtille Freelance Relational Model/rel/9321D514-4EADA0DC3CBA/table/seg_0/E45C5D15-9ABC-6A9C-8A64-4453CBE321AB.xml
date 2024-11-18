@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E45C5D15-9ABC-6A9C-8A64-4453CBE321AB" name="ENTERPRISE_PROFILE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>AADAA8B2-375E-EBA8-1661-5A2792D54DCC</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_enterprise_profile" id="8808281B-68FB-5F23-1BD2-A1CF1FEE5107">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>ED10BFCA-5AD3-94E5-AAA4-BB1CDA568008</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="EA9D17DC-6E13-A55D-D334-B53341919496">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>1A84D6B8-AD04-807E-F2BA-5618FC557297</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEGAL_ENTITY_ID_User" id="11DC3E58-10AB-AB88-938C-CBD958382C0C">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>EDAB515D-7776-CBFE-F5AB-C1A16A2456BC</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="92DE8998-E3E7-D930-C4E8-9219D57F1BD2" referredColumn="C34E1CE3-1F43-9FEF-F90F-55F684AFDB11"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="47805CD7-849C-4293-27D7-3276E93467EB" name="ENTERPRISE_PROFILE_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>8E180ECE-9CCF-2F1C-0C40-39C3AB3DCBB9</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8808281B-68FB-5F23-1BD2-A1CF1FEE5107"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5FDBA94F-7BAF-DF3B-770D-04AFCCFE2DC2" name="ENTERPRISE_PROFILE__IDX">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>4F0DB662-7751-92F7-D47B-5DE9BE3D3877</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="11DC3E58-10AB-AB88-938C-CBD958382C0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4026136-4A03-3D87-4CA6-A00CFD8D9CCF" name="ENTERPRISE_PROFILE_LEGAL_ENTITY_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>4F0DB662-7751-92F7-D47B-5DE9BE3D3877</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="11DC3E58-10AB-AB88-938C-CBD958382C0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

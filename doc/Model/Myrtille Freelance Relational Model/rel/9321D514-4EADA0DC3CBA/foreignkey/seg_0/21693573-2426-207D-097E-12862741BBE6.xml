@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="21693573-2426-207D-097E-12862741BBE6" containerWithKeyObject="E6E17C6B-5FAD-A816-3C2C-C6366291DE5B" localFKIndex="7A62ECF8-F89B-01B1-B76B-B289578DC9FB" name="OFFER_STATE_OFFER_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>041508CE-DB52-62C2-61C1-75660CFF6491</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<referredTableLongName>STATE_OFFER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8306C0FA-358D-DE9C-5390-15BA0D5AA581</referredTableID>
+<keyObject>8E83E371-964B-26D3-3574-B1F50BAB2CA1</keyObject>
+<referredKeyID>8E83E371-964B-26D3-3574-B1F50BAB2CA1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_state</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="USER MAKING PAYMENT" directorySegmentName="seg_0" id="0CFD4C97-7EBA-BF30-A173-E9CFE1B818E0">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:17:53 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>95419666-6AA0-07C8-7FBE-92B244CCCD35</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Puede tener varios</nameOnSource>
+<nameOnTarget>tiene un solo </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C4EEDA0F-D8E8-18D4-7B5A-577350B070A4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>52E44DC5-6B10-201F-F52F-EF8F2E75FD77</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="798ADCE4-FF94-5368-2B09-4F1CACC07DD6" name="LEGAL_ENTITY">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 21:31:28 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>C4EEDA0F-D8E8-18D4-7B5A-577350B070A4</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="enterprise_name" id="D387C4B8-25BD-8ECD-E8FC-CE52C0ED161D">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 21:32:07 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fiscal_id" id="7ACEB809-3A4A-A3BB-3895-E5988C1A2DA4">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 21:33:19 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager_name" id="7CC1D889-C274-E3FC-079A-D50C9274742B">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 21:32:36 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="manager_id_card" id="21932C1D-89BC-DE0A-23B2-4D3E116ACEFB">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 21:34:19 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

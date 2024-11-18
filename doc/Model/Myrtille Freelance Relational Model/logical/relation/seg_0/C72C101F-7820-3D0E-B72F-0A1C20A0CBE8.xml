@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ENTERPRISE - CERTIFICATIONS" directorySegmentName="seg_0" id="C72C101F-7820-3D0E-B72F-0A1C20A0CBE8">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 23:56:21 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>8E180ECE-9CCF-2F1C-0C40-39C3AB3DCBB9</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>puede tener varias</nameOnSource>
+<nameOnTarget>tiene una</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AADAA8B2-375E-EBA8-1661-5A2792D54DCC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>78A9F216-4A0F-C09C-A8AF-8A8CD76AED27</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

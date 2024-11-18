@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F705162-296E-4831-FB1C-F5A7059C07F2" name="EDUCATION">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>2B163BCA-9492-5CB7-E974-7AE5B5B71FD8</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_education" id="56771398-C7BB-3568-FA86-BDAAF45610C5">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>708703C4-DFDA-F0E9-8E68-024AE91775C4</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="certification_name" id="902F16A1-9C78-8F60-8826-8018156EA1AD">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>94CCB5F4-1953-7445-F28B-BBFC9DE64A69</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="certifying_institute_name" id="631BB1B4-841A-051F-21C2-37377E0B1804">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>D3130F09-9F01-4891-AE4C-D5181C6608C2</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="star_date" id="2F0ED5A2-D5FC-A2B6-DDA6-92D2A4322530">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>9C0BE626-F839-3B42-8BA6-3BDBEC5C9499</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT048</logicalDatatype>
+<dataTypeScale>12</dataTypeScale>
+<ownDataTypeParameters>,,12</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_date" id="CD77AAA4-E77F-B3CC-248F-F20D2E112F2C">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>90D41720-C89D-DA61-3723-B7B6E63D3347</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT048</logicalDatatype>
+<dataTypeScale>12</dataTypeScale>
+<ownDataTypeParameters>,,12</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="country" id="CD33D452-5E38-5D8F-3EE8-0BB273125788">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>1FA8F626-0FB9-6093-621D-1C5574954C6E</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSONAL_PROFILE_Id_personal_profile" id="9CBE540D-63E2-B9E0-692E-52BA9E9EE12E">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>8903558C-8A59-94DF-7865-2C84CAE522EC</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7676AC22-ADF0-7EF6-3C6F-BC7172FA8FD9" referredColumn="CC888C54-37FF-B0F6-3897-92BE59653EBD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7A69A28F-A58F-9EB7-1098-34D227706900" name="EDUCATION_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>C3E262AD-E309-D000-E0B4-59602E5AAEEE</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56771398-C7BB-3568-FA86-BDAAF45610C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C261FB50-4364-0596-7761-7625B6323241" name="EDUCATION_PERSONAL_PROFILE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>EB0E528C-C377-C04E-FD8B-4D453731E0D2</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CBE540D-63E2-B9E0-692E-52BA9E9EE12E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

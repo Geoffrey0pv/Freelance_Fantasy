@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PERSONAL - REVIEWS" directorySegmentName="seg_0" id="62A6DF8A-7E5F-57D6-88B2-F717DF44965E">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 00:27:02 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>49291B47-EB62-AAFE-5CC1-12C110A2D788</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Puede tener varias</nameOnSource>
+<nameOnTarget>tiene un</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7DDB46D9-37E9-46A6-3A88-2946B3AE0C52</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>75B0C3BA-E1E7-AD8B-BC41-86AB27EAA4EE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

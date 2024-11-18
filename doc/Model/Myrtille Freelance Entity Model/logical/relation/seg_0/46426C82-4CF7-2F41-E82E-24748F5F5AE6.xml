@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MESSAGE USER" directorySegmentName="seg_0" id="46426C82-4CF7-2F41-E82E-24748F5F5AE6">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:14:14 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>EF2B3708-D5EE-5028-4333-329D80E5D12D</sourcePk>
+<targetPk>95419666-6AA0-07C8-7FBE-92B244CCCD35</targetPk>
+<identifying>false</identifying>
+<nameOnSource>un mensaje tiene un</nameOnSource>
+<nameOnTarget>un usuario tiene un</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>10CDB272-C5AA-F0ED-B92B-6387C74FCFE4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>C4EEDA0F-D8E8-18D4-7B5A-577350B070A4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

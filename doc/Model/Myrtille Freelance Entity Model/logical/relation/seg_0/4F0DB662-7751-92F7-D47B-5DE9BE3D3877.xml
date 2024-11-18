@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="LEGAL ENTITY - PROFILE ENTERPRISE" directorySegmentName="seg_0" id="4F0DB662-7751-92F7-D47B-5DE9BE3D3877">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 00:30:07 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>8E180ECE-9CCF-2F1C-0C40-39C3AB3DCBB9</sourcePk>
+<targetPk>95419666-6AA0-07C8-7FBE-92B244CCCD35</targetPk>
+<dominantRole>798ADCE4-FF94-5368-2B09-4F1CACC07DD6</dominantRole>
+<identifying>false</identifying>
+<nameOnSource>tiene un</nameOnSource>
+<nameOnTarget>debe tener un</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AADAA8B2-375E-EBA8-1661-5A2792D54DCC</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>798ADCE4-FF94-5368-2B09-4F1CACC07DD6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,358 @@
+.notifications-container {
+    position: relative;
+    z-index: 10;
+}
+
+.notifications-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.notifications-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.mark-all-button {
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-all-button:hover {
+    background-color: #218838;
+}
+
+.notifications-box {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.notifications-content {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.notifications-content[style*="rotateY(180deg)"] {
+    transform: rotateY(180deg);
+}
+
+
+.notification-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item.unread {
+    border-left-color: #007bff;
+}
+
+.notification-item.read {
+    border-left-color: #6c757d;
+}
+
+.notification-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification-description {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.notification-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.mark-as-read-button {
+    padding: 8px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.mark-as-read-button:hover {
+    background: #218838;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-state h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 16px;
+    color: #555;
+}
+
+.empty-image {
+    margin-top: 20px;
+    max-width: 300px;
+    opacity: 0.8;
+}
+
+.delete-drop-zone {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed #dc3545;
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    border-radius: 10px;
+    background: #f8d7da;
+    transition: all 0.3s ease;
+}
+
+.delete-drop-zone:hover {
+    background: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+.notifications-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.notifications-content {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.notification-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item.unread {
+    border-left: 5px solid #007bff;
+}
+
+.notification-item.read {
+    border-left: 5px solid #6c757d;
+}
+
+.delete-drop-zone {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed #dc3545;
+    text-align: center;
+    color: #dc3545;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.delete-drop-zone {
+    transition: all 0.3s ease;
+    padding: 15px;
+    border: 2px dashed #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.notification-item[draggable="true"]:active {
+    opacity: 0.5;
+    transform: translateY(20px) scale(0.8);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.view-more-button {
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.view-more-button:hover {
+    background: #0056b3;
+}
+
+.notification-item {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.notification-item:hover {
+    transform: scale(1.02);
+}
+
+.mark-all-button {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-all-button:hover {
+    background-color: #0056b3;
+}
+
+.notifications-container {
+    background: #f7f9fc;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.notifications-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4c4c92;
+}
+
+.notifications-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0ff;
+    color: #4c4c92;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #4c4c92;
+    color: white;
+    font-weight: bold;
+}
+
+.mark-all-button {
+    padding: 10px 20px;
+    background-color: #7b7bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mark-all-button:hover {
+    background-color: #5757cc;
+}
+
+.notifications-box {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.notification-item.unread:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.notification-description {
+    font-weight: bold;
+    color: #4c4c92;
+}
+
+.notification-date {
+    color: #666;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}

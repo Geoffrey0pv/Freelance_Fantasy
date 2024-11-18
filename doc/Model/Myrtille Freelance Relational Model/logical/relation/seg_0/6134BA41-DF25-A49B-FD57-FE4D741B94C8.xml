@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MILESTONE - TASK" directorySegmentName="seg_0" id="6134BA41-DF25-A49B-FD57-FE4D741B94C8">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:33:36 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<sourcePk>676D20BF-873F-A6B2-F33F-6210FBB80691</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>puede tener varias</nameOnSource>
+<nameOnTarget>tiene un solo</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E6ACAC32-5CD7-2E65-28DC-4913DAB59B81</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2C8EB500-7240-9AC7-F1B3-42C55DFAAD68</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

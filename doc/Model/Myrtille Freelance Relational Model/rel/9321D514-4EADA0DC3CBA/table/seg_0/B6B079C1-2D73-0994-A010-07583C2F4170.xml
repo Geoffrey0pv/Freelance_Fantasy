@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6B079C1-2D73-0994-A010-07583C2F4170" name="PAYMENT">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>52E44DC5-6B10-201F-F52F-EF8F2E75FD77</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_payment" id="46FF965D-70D1-F88A-D02A-7F607F705C64">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>0B146175-9E1D-4286-36BA-DB1697D79460</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount" id="B5513370-DE0D-2CB4-A8F3-EDF84630A1E8">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>082B0AD9-1BD0-C36E-8E2E-3A314617E54D</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="billing_date" id="4985A164-5E63-0C48-789F-EE2EA77099B7">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>2B4DBAF7-858E-E132-F52C-73EF85A95B4A</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID_User" id="543E15AC-5C58-A26F-A5F9-0E553D9B3AE0">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>CC887EE4-5865-5203-04CE-7C7954B0FD8B</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F8A1541-C830-C324-FDEB-D75F1A36CA6B" referredColumn="479EA7F3-A62B-B595-68B4-3C0DA32DB9ED"/>
+</associations>
+</Column>
+<Column name="USER_ID_User2" id="8454C7D6-AC74-1459-8EB0-587500172EA7">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>09C1904F-4E79-4724-D929-FD5CCC118D72</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4878DA07-A514-E0C9-6DB0-3F1F9C2A4398" referredColumn="479EA7F3-A62B-B595-68B4-3C0DA32DB9ED"/>
+</associations>
+</Column>
+<Column name="PAYMENT_TYPE_Id_payment_type" id="6B60960D-46E4-A6E6-C014-87DD29881D92">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>B19D8AA6-3A28-2C11-393E-419E1572F040</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F25064B-9C12-7E1D-6728-CD35496CC8F3" referredColumn="DFA79F52-FF0D-203B-029B-17901322CE5B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A79A8E8B-4093-199F-8106-123C2CC4B50D" name="PAYMENT_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>D7CA7E5D-7F30-B558-5DA3-5500CB2B7364</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46FF965D-70D1-F88A-D02A-7F607F705C64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="055AB1EF-491A-585F-515C-EE03643ADB95" name="PAYMENT_PAYMENT_TYPE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>F81A6F91-C521-92C6-406E-1B2A9849E2F6</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B60960D-46E4-A6E6-C014-87DD29881D92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="038861E3-8047-7F7B-CA35-CED123387B38" name="PAYMENT_USER_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>0CFD4C97-7EBA-BF30-A173-E9CFE1B818E0</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="543E15AC-5C58-A26F-A5F9-0E553D9B3AE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE853AAB-8992-E29D-486A-BE2AF5974546" name="PAYMENT_USER_FKv2">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>29B40861-4B40-416B-A9E9-DAF268FF6C4D</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8454C7D6-AC74-1459-8EB0-587500172EA7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

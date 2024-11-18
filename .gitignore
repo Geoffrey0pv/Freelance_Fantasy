@@ -1,0 +1,86 @@
+
+/src/fronted/fronted/node_modules
+/node_modules
+/node_modules/which
+/node_modules
+
+
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Entorno virtual de Python
+venv/
+*.pyc
+*.pyo
+/__pycache__/
+
+env/
+venv/
+.env/
+*.env
+venv
+/venv
+
+
+# Base de datos local (si estás usando SQLite)
+*.sqlite3
+
+# Archivos de migraciones
+db.sqlite3
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/__pycache__/
+
+# Archivos temporales y de caché
+*.log
+*.pot
+*.mo
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Archivos de JetBrains (como PyCharm)
+.idea/
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.coverage
+.tox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Archivos estáticos generados
+/staticfiles/
+/media/
+
+# Ignorar archivos de caché de Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de caché de Django
+*.sqlite3
+/media/
+/staticfiles/
+/local/
+
+
+# Archivos de compilación de JavaScript y CSS
+dist/
+build/
+
+# Archivos específicos del sistema operativo
+.DS_Store
+Thumbs.db
+*.pyc

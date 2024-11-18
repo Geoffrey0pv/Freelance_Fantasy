@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="52E44DC5-6B10-201F-F52F-EF8F2E75FD77" name="PAYMENT">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:42:42 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_payment" id="0B146175-9E1D-4286-36BA-DB1697D79460">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:42:48 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="amount" id="082B0AD9-1BD0-C36E-8E2E-3A314617E54D">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:43:07 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="billing_date" id="2B4DBAF7-858E-E132-F52C-73EF85A95B4A">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:43:48 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User" id="CC887EE4-5865-5203-04CE-7C7954B0FD8B">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:17:53 UTC</createdTime>
+<generatorID>0CFD4C97-7EBA-BF30-A173-E9CFE1B818E0</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>C4C77025-15BC-EC5C-38E2-FE4759BA38D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User1" id="09C1904F-4E79-4724-D929-FD5CCC118D72">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:18:18 UTC</createdTime>
+<generatorID>29B40861-4B40-416B-A9E9-DAF268FF6C4D</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>C4C77025-15BC-EC5C-38E2-FE4759BA38D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_payment_type" id="B19D8AA6-3A28-2C11-393E-419E1572F040">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:19:17 UTC</createdTime>
+<generatorID>F81A6F91-C521-92C6-406E-1B2A9849E2F6</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>34175580-25AE-5FF3-451E-17524964032F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D7CA7E5D-7F30-B558-5DA3-5500CB2B7364" name="PAYMENT PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 03:43:06 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0B146175-9E1D-4286-36BA-DB1697D79460</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

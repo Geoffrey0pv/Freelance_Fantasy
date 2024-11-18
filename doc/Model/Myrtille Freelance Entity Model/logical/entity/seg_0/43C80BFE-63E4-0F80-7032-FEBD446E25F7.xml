@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="43C80BFE-63E4-0F80-7032-FEBD446E25F7" name="NOTIFICATION">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:00:23 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_notification" id="5368CB6E-AE20-9BBA-B4B8-E1CA90963292">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:00:44 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Content" id="0583F584-056D-7A1E-7B78-6B5C1CE65848">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:00:56 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date_and_time_message" id="3CBB547F-CD42-F22D-05BA-175DF58602C5">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:01:30 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_User" id="D4DBA19B-33B5-4A8E-A268-EABC7324D76B">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:15:56 UTC</createdTime>
+<generatorID>4897A019-1A5A-154D-F218-FB20515EF34B</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>C4C77025-15BC-EC5C-38E2-FE4759BA38D2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_notification_type" id="87F3FB32-2A88-02D0-1763-B8DB5FF62F84">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:16:44 UTC</createdTime>
+<generatorID>213D5B34-7865-F9FA-FEC8-149288ECB670</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>D82DBF98-6B81-2350-7907-36FB3A3BF9DD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="11FF3D40-311F-AE0F-19E0-BC5A6287A409" name="NOTIFICATION PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:00:55 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5368CB6E-AE20-9BBA-B4B8-E1CA90963292</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

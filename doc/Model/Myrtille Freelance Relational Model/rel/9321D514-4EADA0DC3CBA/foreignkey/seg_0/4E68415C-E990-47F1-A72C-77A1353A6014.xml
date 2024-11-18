@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4E68415C-E990-47F1-A72C-77A1353A6014" containerWithKeyObject="1CFB997D-6D7D-67A7-596B-E128C48EF716" localFKIndex="96A6EDB3-8769-3012-0CDB-45DD4244EC38" name="NOTIFICATION_NOTIFICATION_TYPE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>213D5B34-7865-F9FA-FEC8-149288ECB670</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<referredTableLongName>NOTIFICATION_TYPE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1855B712-EED0-D74C-587B-01F95C73000E</referredTableID>
+<keyObject>69B953E5-F804-A3A7-510B-0D40EA368275</keyObject>
+<referredKeyID>69B953E5-F804-A3A7-510B-0D40EA368275</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_notification_type</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

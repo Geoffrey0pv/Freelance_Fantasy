@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7EE8657A-D085-5C8B-895A-5A5D29B5807D" name="SKILLS">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>230899D8-7CE4-F448-1219-C9DD45D9B9C2</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_skills" id="CC6F8784-191E-08E5-A58C-6FBD86C611E7">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>EAB38718-2214-DCA8-C3AA-B1A754DD5B72</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="skill" id="B935B33F-6E92-AB73-9D20-E2C590ACF8E9">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>DB4975F2-0B80-DC57-096C-BAB125CD1C97</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENTERPRISE_PROFILE_Id_enterprise_profile" id="F65DFD96-0322-71F6-6AE8-A09AF9DC361E">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>2022AF1C-80F1-22FD-933C-50016CEC3103</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D2096D31-F4D8-106B-8C6F-9C1D4526F1F2" referredColumn="8808281B-68FB-5F23-1BD2-A1CF1FEE5107"/>
+</associations>
+</Column>
+<Column name="PERSONAL_PROFILE_Id_personal_profile" id="2861691E-51E4-53F7-16AF-070C6AA3EDF9">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>C5F7B37D-2243-534E-1114-7CD98D8060EE</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA945BBE-6701-CF7D-8790-760200EFD61C" referredColumn="CC888C54-37FF-B0F6-3897-92BE59653EBD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DAF263E3-6B72-DD9E-E78B-C266ADDE0CC5" name="SKILLS_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>C4C87B24-20E5-BD63-54A7-89D975C4690B</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC6F8784-191E-08E5-A58C-6FBD86C611E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BAABFEAF-548A-CC28-5427-0D25EF445B81" name="SKILLS_ENTERPRISE_PROFILE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>E7298ABC-338D-D61B-AB11-29529D026B66</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F65DFD96-0322-71F6-6AE8-A09AF9DC361E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F52E1404-4BAB-563E-AFA4-A5482F51ED2E" name="SKILLS_PERSONAL_PROFILE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>FF68FAF6-9585-D90D-1B9A-CD4356C5BD3B</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2861691E-51E4-53F7-16AF-070C6AA3EDF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="2C6BDF5C-8552-F85A-AF97-4F930940253E" mainViewID="394A4C27-7B82-AAD8-C9E0-26DE44620F12">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 18:21:50 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

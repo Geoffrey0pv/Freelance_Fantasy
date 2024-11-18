@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FDF49C22-2B37-9BC1-1B2C-3B0A44FB6E27" containerWithKeyObject="7D5CA153-9977-3084-516B-D2C852AC5DFE" localFKIndex="A161EC75-58BC-9F4D-869E-1A254DD53A2A" name="CERTIFICATION_ENTERPRISE_PROFILE_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>C72C101F-7820-3D0E-B72F-0A1C20A0CBE8</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<referredTableLongName>ENTERPRISE_PROFILE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E45C5D15-9ABC-6A9C-8A64-4453CBE321AB</referredTableID>
+<keyObject>47805CD7-849C-4293-27D7-3276E93467EB</keyObject>
+<referredKeyID>47805CD7-849C-4293-27D7-3276E93467EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id_enterprise_profile</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

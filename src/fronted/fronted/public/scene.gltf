@@ -1,0 +1,271 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1134,
+      "max": [
+        3.7859199047088623,
+        2.282320022583008,
+        9.550350189208984
+      ],
+      "min": [
+        -2.1361000537872314,
+        -1.7126200199127197,
+        -0.0002699999895412475
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 13608,
+      "componentType": 5126,
+      "count": 1134,
+      "max": [
+        0.9970526099205017,
+        0.960428774356842,
+        0.9986920356750488
+      ],
+      "min": [
+        -0.9970526099205017,
+        -0.98724365234375,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1134,
+      "max": [
+        0.956309974193573,
+        0.9164599776268005
+      ],
+      "min": [
+        0.04910000041127205,
+        0.5306500196456909
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1644,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "VitSh (https://sketchfab.com/VitSh)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/wizard-asset-fot-tower-of-the-wizard-scene-2bee14d9fbf649d28ba20aad3e0c6790",
+      "title": "Wizard asset fot 'Tower of the Wizard' scene"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6576,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 9072,
+      "byteOffset": 6576,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27216,
+      "byteOffset": 15648,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 42864,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/color_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "color",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5950920245398773
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cube.002_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        4,
+        6
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        -0.002810000000000001,
+        1.14098,
+        0.70576,
+        0.0,
+        -1.3048899999999999,
+        0.16166000000000003,
+        -0.26655,
+        0.0,
+        -0.31173,
+        -0.6870000000000002,
+        1.10941,
+        0.0,
+        -7.09746,
+        3.30792,
+        10.429730000000001,
+        1.0
+      ],
+      "name": "Hemi"
+    },
+    {
+      "name": "Hemi"
+    },
+    {
+      "children": [
+        5
+      ],
+      "matrix": [
+        0.12254000000000001,
+        0.7808200000000001,
+        1.0840800000000002,
+        0.0,
+        -1.27155,
+        0.40223,
+        -0.14598000000000003,
+        0.0,
+        -0.40998000000000007,
+        -1.01413,
+        0.77678,
+        0.0,
+        -5.02667,
+        -12.80421,
+        15.36497,
+        1.0
+      ],
+      "name": "Hemi.001"
+    },
+    {
+      "name": "Hemi.001"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        0.24463000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.24463000000000001,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.21982000000000002,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Cube.002"
+    },
+    {
+      "mesh": 0,
+      "name": "Cube.002_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}

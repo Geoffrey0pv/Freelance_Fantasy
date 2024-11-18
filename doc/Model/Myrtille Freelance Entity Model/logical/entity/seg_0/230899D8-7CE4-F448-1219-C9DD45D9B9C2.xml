@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="230899D8-7CE4-F448-1219-C9DD45D9B9C2" name="SKILLS">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 23:49:20 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_skills" id="EAB38718-2214-DCA8-C3AA-B1A754DD5B72">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 23:50:52 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="skill" id="DB4975F2-0B80-DC57-096C-BAB125CD1C97">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 23:51:02 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_enterprise_profile" id="2022AF1C-80F1-22FD-933C-50016CEC3103">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 00:05:06 UTC</createdTime>
+<generatorID>E7298ABC-338D-D61B-AB11-29529D026B66</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>ED10BFCA-5AD3-94E5-AAA4-BB1CDA568008</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id_personal_profile" id="C5F7B37D-2243-534E-1114-7CD98D8060EE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 00:05:12 UTC</createdTime>
+<generatorID>FF68FAF6-9585-D90D-1B9A-CD4356C5BD3B</generatorID>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<referedAttribute>DC22F108-4C59-FED9-40F5-0B26DA910C5A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4C87B24-20E5-BD63-54A7-89D975C4690B" name="SKILLS PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 23:55:42 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<engineerTo>
+<item key="9321D514-0B0F-7A7C-1C72-4EADA0DC3CBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EAB38718-2214-DCA8-C3AA-B1A754DD5B72</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

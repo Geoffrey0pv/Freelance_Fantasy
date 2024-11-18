@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="584B5D22-002A-6C48-7DD9-6B5C32E77FB1" name="PERSONAL_PROFILE">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>7DDB46D9-37E9-46A6-3A88-2946B3AE0C52</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Id_personal_profile" id="CC888C54-37FF-B0F6-3897-92BE59653EBD">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>DC22F108-4C59-FED9-40F5-0B26DA910C5A</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="6C119266-3738-17D8-B380-33DC83C36A82">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>224B25CC-CD17-44BD-E9C9-1607839F12B8</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 CHAR</dataTypeSize>
+<ownDataTypeParameters>300 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NATURAL_PERSON_ID_User" id="EFF9F268-25D2-147D-F702-05FC78099901">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>9E2F41DC-A2DF-EF8E-EB4C-8CA937930DFC</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B68CA70A-2699-B633-91C8-1AE1EDF6C47F" referredColumn="514AEC03-D4EA-E6D9-067A-D6839AD85A4C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="624B3776-11A2-46EF-22F1-E8919E7FD724" name="PERSONAL_PROFILE_PK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>49291B47-EB62-AAFE-5CC1-12C110A2D788</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC888C54-37FF-B0F6-3897-92BE59653EBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4BFC88C-446C-6D72-BAB2-2AD42DFE8AE6" name="PERSONAL_PROFILE__IDX">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>F47A4EAE-742C-564A-134C-74A04BB9A047</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="EFF9F268-25D2-147D-F702-05FC78099901"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02BD24A8-03F7-674F-0C6F-3CB8ED871199" name="PERSONAL_PROFILE_NATURAL_PERSON_FK">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-02 04:23:14 UTC</createdTime>
+<generatorID>F47A4EAE-742C-564A-134C-74A04BB9A047</generatorID>
+<ownerDesignName>Myrtille Freelance Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFF9F268-25D2-147D-F702-05FC78099901"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

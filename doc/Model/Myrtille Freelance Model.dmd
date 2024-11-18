@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Myrtille Freelance Model" id="114768F8-EA8D-E306-642E-E1E762243DD4" version="3.5">
+<createdBy>geoff</createdBy>
+<createdTime>2024-09-01 18:21:50 UTC</createdTime>
+<ownerDesignName>Myrtille Freelance Model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>114768F8-EA8D-E306-642E-E1E762243DD4</designId>
+</OSDM_Design>
