@@ -18,20 +18,22 @@ import { milestoneListReducer } from "@/redux/reducers/milestoneReducers.js";
 import {taskStatsReducer} from "@/redux/reducers/taskStatsReducer.js";
 import {taskListReducer} from "@/redux/reducers/taskReducers.js";
 import notificationsReducer from './reducers/notificationsReducer';
+import { milestoneCreateReducer } from "@/redux/reducers/ultimateMilestoneReducer.js";
+import {  taskCreateReducer } from "@/redux/reducers/ultimateTaskReducer.js";
 
 const getLocalStorageItem = (key, defaultValue) => {
-    const localStorageValue = localStorage.getItem(key);
-    return localStorageValue && localStorageValue !== 'undefined'
-        ? JSON.parse(localStorageValue)
-        : defaultValue;
+  const localStorageValue = localStorage.getItem(key);
+  return localStorageValue && localStorageValue !== 'undefined'
+      ? JSON.parse(localStorageValue)
+      : defaultValue;
 };
 
 const userInfoFromStorage = getLocalStorageItem('userInfo', null);
 
 const preloadedState = {
-    userLogin: {
-        userInfo: userInfoFromStorage
-    }
+  userLogin: {
+    userInfo: userInfoFromStorage
+  }
 };
 
 const store = configureStore({
@@ -57,7 +59,9 @@ const store = configureStore({
     projectComments:projectCommentsReducer,
     milestoneComments: milestoneCommentsReducer,
     taskComments: taskCommentsReducer,
-    notifications: notificationsReducer
+    notifications: notificationsReducer,
+    taskCreateReducer: taskCreateReducer,
+    milestoneCreateReducer: milestoneCreateReducer,
 
   },
   preloadedState,  // Aquí se agrega preloadedState

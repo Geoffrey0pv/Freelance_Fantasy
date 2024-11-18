@@ -4,8 +4,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DataTable from './DataTable';
 import CustomKanban from './Kanban/CustomKanban.jsx';
 import ProjectStats from './Stats/ProjectStats';
-import CommentSection from './Comments/CommentSection';  // Importar el componente de comentarios
+import CommentSection from './Comments/CommentSection';
+import CreateMilestoneDrawer from './Drawers/CreateMilestoneDrawer'; // Importa el drawer para milestones
+import CreateTaskDrawer from './Drawers/CreateTaskDrawer'; // Importa el drawer para tasks
 
+{/* Pestaña de Comentarios */}
 const ProjectBacklog = () => {
     const { projectId } = useParams();
 
@@ -15,6 +18,12 @@ const ProjectBacklog = () => {
                 <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
                     Detalles del Proyecto {projectId}
                 </h1>
+
+                {/* Botones para abrir los drawers */}
+                <div className="flex justify-end space-x-4 mb-4">
+                    <CreateMilestoneDrawer projectId={projectId} />
+                    <CreateTaskDrawer projectId={projectId} />
+                </div>
 
                 <Tabs defaultValue="tasks" className="text-gray-900">
                     <TabsList className="bg-gray-200 flex justify-center w-full rounded-lg mb-4 overflow-hidden">

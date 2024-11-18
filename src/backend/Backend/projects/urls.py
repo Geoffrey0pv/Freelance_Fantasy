@@ -18,9 +18,9 @@ from .views import (
     ProjectCostView,
     project_comments,
     milestone_comments,
-    task_comments,
-    UpdateOfferView,
-    OfferedProjectsByWorkerView,
+    task_comments, MilestoneCreateView
+
+
 )
 
 urlpatterns = [
@@ -36,14 +36,15 @@ urlpatterns = [
     path('projects/worked/', WorkedProjectsView.as_view(), name='worked-projects'),
     path('project/<int:project_id>/milestones/', MilestoneListView.as_view(), name='milestone-list'),
     path('project/<int:project_id>/tasks/', TaskListView.as_view(), name='project-tasks'),
-    path('project/<int:project_id>/offer/<int:offer_id>/update/', UpdateOfferView.as_view(), name='update_offer'),
     path('milestone/<int:milestone_id>/tasks/', CreateTaskView.as_view(), name='create-task'),
     path('project/tasks/<int:pk>/', TaskUpdateView.as_view(), name='task-update'),
-    path('project/<int:project_id>/cost/', ProjectCostView.as_view(), name='project-cost'), 
+    path('project/<int:project_id>/cost/', ProjectCostView.as_view(), name='project-cost'),
     path('project/<int:project_id>/comments/', project_comments, name='project_comments'),
     path('milestone/<int:milestone_id>/comments/', milestone_comments, name='milestone_comments'),
     path('task/<int:task_id>/comments/', task_comments, name='task_comments'),
-    path('projects/workerOffer/<int:worker_id>/', OfferedProjectsByWorkerView.as_view(), name='projects_by_worker_offer'),
+path('project/<int:project_id>/milestones/create/', MilestoneCreateView.as_view(), name='milestone-create'),
+
+
 
 ]
 

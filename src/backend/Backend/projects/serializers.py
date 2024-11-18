@@ -13,20 +13,15 @@ class TagSerializer(serializers.ModelSerializer):
         fields = ['id', 'name']
 
 
-# Task Serializer
+class MilestoneSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Milestone
+        fields = "__all__"
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ['id', 'title', 'description', 'start_date', 'finish_date', 'priority', 'status']
-
-# Milestone Serializer
-class MilestoneSerializer(serializers.ModelSerializer):
-    tasks = TaskSerializer(many=True, read_only=True)
-
-
-    class Meta:
-        model = Milestone
-        fields = ['id', 'title', 'description', 'start_date', 'end_date', 'tasks', 'is_completed','status']
+        fields = "__all__"
 
 # Offer Serializer
 class OfferSerializer(serializers.ModelSerializer):
@@ -34,7 +29,7 @@ class OfferSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Offer
-        fields = ['id', 'description', 'budget_offer', 'date_submission','user','is_reviewed','status']
+        fields = ['id', 'description', 'budget_offer', 'date_submission', 'user']
 
 # Project Serializer
 class ProjectSerializer(serializers.ModelSerializer):

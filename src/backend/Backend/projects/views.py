@@ -35,13 +35,13 @@ class ProjectListByWorkerView(generics.ListAPIView):
     def get_queryset(self):
         worker_id = self.kwargs['worker_id']
         return Project.objects.filter(worker_id=worker_id)  # Filtra los proyectos por worker_id
-    
+
 class ProjectListByOwnerView(generics.ListAPIView):
     serializer_class = ProjectDetailSerializer
 
     def get_queryset(self):
         owner_id = self.kwargs['owner_id']  # Cambia 'worker_id' a 'owner_id'
-        return Project.objects.filter(user_id=owner_id) 
+        return Project.objects.filter(user_id=owner_id)
 
 class CreateOfferView(generics.CreateAPIView):
     serializer_class = OfferSerializer
@@ -189,25 +189,7 @@ class MilestoneListView(generics.ListAPIView):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
-class CreateTaskView(generics.CreateAPIView):
-    serializer_class = TaskSerializer
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated]
 
-    def post(self, request, *args, **kwargs):
-        milestone_id = kwargs.get('milestone_id')
-        milestone = get_object_or_404(Milestone, id=milestone_id)
-
-        # Agregar el milestone a los datos antes de la validación
-        data = request.data.copy()
-        data['milestone'] = milestone.id
-
-        serializer = TaskSerializer(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 class TaskUpdateView(generics.UpdateAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
@@ -302,40 +284,39 @@ class PublicProjectListView(generics.ListAPIView):
             'results': response.data
         }, status=status.HTTP_200_OK)
 
-class UpdateOfferView(generics.UpdateAPIView):
-    """
-    Vista para actualizar una oferta existente vinculada a un proyecto.
-    """
-    serializer_class = OfferSerializer
+class MilestoneCreateView(generics.CreateAPIView):
+    serializer_class = MilestoneSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def get_object(self):
-        """
-        Obtiene la instancia de la oferta asegurándose de que
-        pertenece al proyecto especificado y que el usuario es el propietario.
-        """
-        project_id = self.kwargs.get('project_id')
-        offer_id = self.kwargs.get('offer_id')
-
-        # Verifica que el proyecto exista
+    def post(self, request, *args, **kwargs):
+        project_id = kwargs.get('project_id')
         project = get_object_or_404(Project, id=project_id)
 
-        # Obtiene la oferta y valida que pertenezca al proyecto y al usuario autenticado
-        offer = get_object_or_404(Offer, id=offer_id, project=project)
+        data = request.data.copy()
+        data['project'] = project.id
 
-        return offer
-    
-class OfferedProjectsByWorkerView(generics.ListAPIView):
-    """
-    Vista para obtener los proyectos en los que un trabajador específico ha hecho una oferta
-    """
-    serializer_class = ProjectSerializer
+        serializer = self.get_serializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class CreateTaskView(generics.CreateAPIView):
+    serializer_class = TaskSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
-    filter_backends = [DjangoFilterBackend]
 
-    def get_queryset(self):
-        worker_id = self.kwargs['worker_id']  # Obtén el worker_id desde la URL
-        # Filtramos proyectos que tengan ofertas donde el ID del usuario coincida con worker_id
-        return Project.objects.filter(offers__user__id=worker_id).distinct()
+    def post(self, request, *args, **kwargs):
+        milestone_id = kwargs.get('milestone_id')
+        milestone = get_object_or_404(Milestone, id=milestone_id)
+
+        data = request.data.copy()
+        data['milestone'] = milestone.id
+
+        serializer = self.get_serializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

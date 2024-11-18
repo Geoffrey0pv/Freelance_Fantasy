@@ -3,6 +3,9 @@
 from django.db import models
 from users.models import User
 from django.core.exceptions import ValidationError
+from django.db import models
+from users.models import User
+from django.core.exceptions import ValidationError
 from django.db.models import Sum
 from django.utils import timezone
 
@@ -88,7 +91,7 @@ class Task(models.Model):
     start_date = models.DateField()
     finish_date = models.DateField()
     priority = models.CharField(max_length=10, choices=PRIORITY_CHOICES, default='media')
-    status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='por-empezar')
+    status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='en-proceso')
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)  # Nuevo campo de precio
 
     def clean(self):
@@ -133,8 +136,6 @@ class Offer(models.Model):
     description = models.TextField()
     budget_offer = models.DecimalField(max_digits=10, decimal_places=2)
     date_submission = models.DateTimeField(auto_now_add=True)
-    is_reviewed = models.BooleanField(default=False) 
-    status = models.BooleanField(null=True)  
 
     def __str__(self):
         return f"Offer by {self.user.username} for {self.project.title}"
