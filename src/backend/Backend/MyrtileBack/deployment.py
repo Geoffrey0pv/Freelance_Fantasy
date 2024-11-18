@@ -8,6 +8,7 @@ CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
 DEBUG = False
 SECRET_KEY = os.environ['MY_SECRET_KEY']
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -25,11 +26,11 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = []
 
 STORAGES = {
-    "default" : {
+    "default": {
         "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
-    " staticfiles " : {
-        "BACKEND": "whiteenoise.storage.CompressedStaticFilesStorage",
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
@@ -46,4 +47,4 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR/'staticfiles'
