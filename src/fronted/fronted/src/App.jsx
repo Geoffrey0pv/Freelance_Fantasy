@@ -18,7 +18,7 @@ import MessagingScreen from './screens/MessagingScreen.jsx';
 import PrivateRoute from './components/General/PrivateRoute';
 import ProfileLayout from './components/Profile/View/ProfileLayout';
 import PayingScreen from './screens/PayingScreen';
-import YourProjects from './components/Management/YourProjects.jsx';
+import YourProjects from './components/Management/yourProjects';
 import ProjectBacklog from './components/Management/ProjectBacklog.jsx';
 import FreelancersListScreen from './screens/FreelancersListScreen';
 import ConfigScreen from './screens/ConfigScreen';
@@ -28,7 +28,6 @@ import Notifications from './components/Notifications/Notifications';
 import ViewOthersProfileScreen from './screens/ViewOthersProfileScreen';
 import OffersScreen from './screens/OffersScreen';
 import AboutScreen from "@/screens/AboutScreen.jsx";
-
 
 function AppContent({ userInfo }) {
     const location = useLocation();
