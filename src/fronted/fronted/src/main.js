@@ -1,11 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';  // Change this import to use createRoot
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import store from './redux/store.jsx'; // Asegúrate de que el store esté correctamente configurado
-import App from './App.jsx';
+import store from './redux/store';
+import App from './App';
 
-// Create a root and render the app
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// Verifica si el elemento con id "root" existe en el DOM
+const rootElement = document.getElementById('root');
+console.log(rootElement); // Debería mostrar el elemento en la consola. Si muestra null, hay un problema en tu HTML.
+
+if (!rootElement) {
+  throw new Error("No se encontró el elemento con id 'root'. Asegúrate de que el HTML tenga <div id='root'></div>.");
+}
+
+// Crear la raíz y renderizar la aplicación
+const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <Provider store={store}>
