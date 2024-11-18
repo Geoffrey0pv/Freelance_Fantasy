@@ -234,6 +234,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:5173",
+    "https://freelancefantasy-backend-dfbte3d4f0csd5bc.scm.westus-01.azurewebsites.net",
+    "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
