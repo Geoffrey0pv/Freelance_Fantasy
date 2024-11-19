@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { BASE_API_URL } from './apiConfig';
 
 class ProjectService {
-    constructor(baseUrl = process.env.VITE_API_BASE_URL_PROD || 'http://127.0.0.1:8000/') {
-        this.baseUrl = baseUrl; // Usa una URL dinámica que puede configurarse desde variables de entorno
+    constructor() {
+        this.baseUrl = BASE_API_URL; // Usa una URL dinámica que puede configurarse desde variables de entorno
     }
 
     // Método para obtener el token desde localStorage
