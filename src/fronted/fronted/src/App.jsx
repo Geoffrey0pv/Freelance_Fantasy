@@ -18,7 +18,7 @@ import MessagingScreen from './screens/MessagingScreen.jsx';
 import PrivateRoute from './components/General/PrivateRoute';
 import ProfileLayout from './components/Profile/View/ProfileLayout';
 import PayingScreen from './screens/PayingScreen';
-import YourProjects from './components/Management/YourProjects.jsx';
+import YourProjects from './components/Management/yourProjects.jsx';
 import ProjectBacklog from './components/Management/ProjectBacklog.jsx';
 import FreelancersListScreen from './screens/FreelancersListScreen';
 import ConfigScreen from './screens/ConfigScreen';
