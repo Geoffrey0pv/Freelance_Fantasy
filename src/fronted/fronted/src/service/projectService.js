@@ -25,7 +25,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}project/${id}/`, config);
+            const response = await axios.get(`${this.baseUrl}/project/${id}/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getProjectById:', error);
@@ -46,7 +46,7 @@ class ProjectService {
                 },
             };
 
-            const response = await axios.post(`${this.baseUrl}project/${projectId}/offer/`, offerData, config);
+            const response = await axios.post(`${this.baseUrl}/project/${projectId}/offer/`, offerData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService postOffer:', error);
@@ -57,7 +57,7 @@ class ProjectService {
     // Método para obtener la lista de proyectos con paginación y filtros
     async getProjects(page = 1, pageSize = 10, tag = '', location = '') {
         try {
-            const url = `${this.baseUrl}projects/public/?page=${page}&page_size=${pageSize}&tag=${encodeURIComponent(tag)}&location=${encodeURIComponent(location)}`;
+            const url = `${this.baseUrl}/projects/public/?page=${page}&page_size=${pageSize}&tag=${encodeURIComponent(tag)}&location=${encodeURIComponent(location)}`;
             const response = await axios.get(url);
             return response.data;
         } catch (error) {
@@ -78,7 +78,7 @@ class ProjectService {
                 },
             };
 
-            const response = await axios.post(`${this.baseUrl}projects/create/`, formData, config);
+            const response = await axios.post(`${this.baseUrl}/projects/create/`, formData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService postProject:', error);
@@ -95,7 +95,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const url = `${this.baseUrl}projects/worked/?page=${page}&page_size=${pageSize}`;
+            const url = `${this.baseUrl}/projects/worked/?page=${page}&page_size=${pageSize}`;
             const response = await axios.get(url, config);
             return response.data;
         } catch (error) {
@@ -113,7 +113,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const url = `${this.baseUrl}projects/owned/?page=${page}&page_size=${pageSize}`;
+            const url = `${this.baseUrl}/projects/owned/?page=${page}&page_size=${pageSize}`;
             const response = await axios.get(url, config);
             return response.data;
         } catch (error) {
@@ -131,7 +131,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}project/${projectId}/tasks/`, config);
+            const response = await axios.get(`${this.baseUrl}/project/${projectId}/tasks/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getTasksByProjectId:', error);
@@ -148,7 +148,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}project/${projectId}/milestones/`, config);
+            const response = await axios.get(`${this.baseUrl}/project/${projectId}/milestones/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getMilestonesByProjectId:', error);
@@ -168,7 +168,7 @@ class ProjectService {
                 },
             };
 
-            const response = await axios.post(`${this.baseUrl}milestone/${milestoneId}/tasks/`, taskData, config);
+            const response = await axios.post(`${this.baseUrl}/milestone/${milestoneId}/tasks/`, taskData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService createTask:', error);
@@ -197,7 +197,7 @@ class ProjectService {
             };
 
             const data = { status: newStatus };
-            const response = await axios.patch(`${this.baseUrl}project/tasks/${taskId}/`, data, config);
+            const response = await axios.patch(`${this.baseUrl}/project/tasks/${taskId}/`, data, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService updateTaskStatus:', error);
@@ -214,7 +214,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}project/${projectId}/cost/`, config);
+            const response = await axios.get(`${this.baseUrl}/project/${projectId}/cost/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getProjectCost:', error);
@@ -231,7 +231,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}project/${projectId}/comments/`, config);
+            const response = await axios.get(`${this.baseUrl}/project/${projectId}/comments/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getProjectComments:', error);
@@ -248,7 +248,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.post(`${this.baseUrl}project/${projectId}/comments/`, commentData, config);
+            const response = await axios.post(`${this.baseUrl}/project/${projectId}/comments/`, commentData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService postProjectComment:', error);
@@ -265,7 +265,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}milestone/${milestoneId}/comments/`, config);
+            const response = await axios.get(`${this.baseUrl}/milestone/${milestoneId}/comments/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getMilestoneComments:', error);
@@ -282,7 +282,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.post(`${this.baseUrl}milestone/${milestoneId}/comments/`, commentData, config);
+            const response = await axios.post(`${this.baseUrl}/milestone/${milestoneId}/comments/`, commentData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService postMilestoneComment:', error);
@@ -299,7 +299,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}task/${taskId}/comments/`, config);
+            const response = await axios.get(`${this.baseUrl}/task/${taskId}/comments/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getTaskComments:', error);
@@ -316,7 +316,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.post(`${this.baseUrl}task/${taskId}/comments/`, commentData, config);
+            const response = await axios.post(`${this.baseUrl}/task/${taskId}/comments/`, commentData, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService postTaskComment:', error);
@@ -333,7 +333,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.post(`${this.baseUrl}offers/${offerId}/accept/`, {}, config);
+            const response = await axios.post(`${this.baseUrl}/offers/${offerId}/accept/`, {}, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService acceptOffer:', error);
@@ -353,7 +353,7 @@ class ProjectService {
                 },
             };
 
-            const url = `${this.baseUrl}project/${projectId}/offer/${offerId}/update/`;
+            const url = `${this.baseUrl}/project/${projectId}/offer/${offerId}/update/`;
 
             const response = await axios.put(url, offerData, config);
             return response.data;
@@ -372,7 +372,7 @@ class ProjectService {
                 headers: { 'Authorization': `Bearer ${token}` },
             };
 
-            const response = await axios.get(`${this.baseUrl}projects/workerOffer/${workerId}/`, config);
+            const response = await axios.get(`${this.baseUrl}/projects/workerOffer/${workerId}/`, config);
             return response.data;
         } catch (error) {
             console.error('Error in ProjectService getProjectsByWorkerOffer:', error);

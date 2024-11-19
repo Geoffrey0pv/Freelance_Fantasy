@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { BASE_API_URL } from './apiConfig';
 
 // Define la base URL desde variables de entorno o usa una URL por defecto
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/';
+const BASE_URL = BASE_API_URL
 
 export const getProjectsByWorker = async (workerId) => {
     try {
-        const response = await fetch(`${BASE_URL}projects/worker/${workerId}/`); // URL dinámica
+        const response = await fetch(`${BASE_URL}/projects/worker/${workerId}/`); // URL dinámica
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -19,7 +20,7 @@ export const getProjectsByWorker = async (workerId) => {
 
 export const getProjectsByOwner = async (ownerId) => {
     try {
-        const response = await fetch(`${BASE_URL}projects/owner/${ownerId}/`); // URL dinámica
+        const response = await fetch(`${BASE_URL}/projects/owner/${ownerId}/`); // URL dinámica
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -33,7 +34,7 @@ export const getProjectsByOwner = async (ownerId) => {
 
 export const getProjectById = async (projectId) => {
     try {
-        const response = await axios.get(`${BASE_URL}project/${projectId}/`); // URL dinámica
+        const response = await axios.get(`${BASE_URL}/project/${projectId}/`); // URL dinámica
         return response.data; // Retorna los datos del proyecto
     } catch (error) {
         console.error('Error al obtener el proyecto:', error);
