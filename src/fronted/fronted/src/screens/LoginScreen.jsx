@@ -7,6 +7,7 @@ import Button from "../components/General/Button.jsx";
 import GoogleLoginButton from "../components/Login/GoogleLoginButton.jsx";
 import WizardCanvas from "../components/Canvas/Wizard.jsx";
 import ForgotPasswordButton from "../components/Login/ForgotPasswordButton.jsx";
+import { Link } from "react-router-dom";
 
 const LoginScreen = () => {
   const [username, setUsername] = useState("");
