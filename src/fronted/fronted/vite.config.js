@@ -9,8 +9,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: './', // Esto asegura que las rutas sean relativas en producción
-  plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss()],
@@ -18,7 +16,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "/src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   server: {

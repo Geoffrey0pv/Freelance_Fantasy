@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { BASE_API_URL } from './apiConfig';
 
 // Servicio para obtener el perfil completo del usuario
 export const getProfileService = async (token) => {
@@ -10,33 +9,25 @@ export const getProfileService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/users/profile/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/users/profile/', config);
   return data;
 };
 
-// Servicio para actualizar el username
+// Servicio para actualizar el username (PUT)
 export const updateUsernameService = async (token, newUsername) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
-  const response = await axios.put(
-    `${BASE_API_URL}/users/update-username/`,
-    { username: newUsername },
-    config
-  );
+  const response = await axios.put('http://127.0.0.1:8000/users/update-username/', { username: newUsername }, config);
   return response.data;
 };
 
-// Servicio para actualizar la contraseña
+// Servicio para actualizar la contraseña (PUT)
 export const updatePasswordService = async (token, newPassword) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
-  const response = await axios.put(
-    `${BASE_API_URL}/users/update-password/`,
-    { password: newPassword },
-    config
-  );
+  const response = await axios.put('http://127.0.0.1:8000/users/update-password/', { password: newPassword }, config);
   return response.data;
 };
 
@@ -45,7 +36,7 @@ export const updateUserProfileService = async (token, profileData) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
-  const response = await axios.put(`${BASE_API_URL}/users/update-profile/`, profileData, config);
+  const response = await axios.put('http://127.0.0.1:8000/users/update-profile/', profileData, config);
   return response.data;
 };
 
@@ -58,7 +49,7 @@ export const getSkillsService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/skills/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/skills/', config);
   return data;
 };
 
@@ -71,7 +62,7 @@ export const createSkillsService = async (token, skills) => {
     },
   };
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/skills/`, { skills }, config);
+  const { data } = await axios.post('http://127.0.0.1:8000/profile/skills/', { skills }, config);
   return data;
 };
 
@@ -85,18 +76,25 @@ export const updateSkillsService = async (token, skillData) => {
   };
 
   const responses = [];
+  // Itera sobre cada habilidad y envía una solicitud POST para cada una
   for (const skill of skillData) {
     try {
-      const { data } = await axios.post(`${BASE_API_URL}/profile/skills/`, skill, config);
-      responses.push(data);
+      const { data } = await axios.post(
+        `http://127.0.0.1:8000/profile/skills/`,
+        skill,  // Enviar cada habilidad directamente sin envolver en otro objeto
+        config
+      );
+      responses.push(data);  // Almacena la respuesta de cada solicitud
     } catch (error) {
       console.error(`Error al enviar la habilidad ${JSON.stringify(skill)}:`, error.response?.data || error.message);
-      throw error;
+      throw error;  // Maneja el error según sea necesario
     }
   }
 
-  return responses;
+  return responses;  // Retorna un array con las respuestas de cada solicitud
 };
+
+
 
 // Servicio para obtener la experiencia del perfil (GET)
 export const getExperienceService = async (token) => {
@@ -107,7 +105,7 @@ export const getExperienceService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/experiences/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/experiences/', config);
   return data;
 };
 
@@ -120,7 +118,7 @@ export const createExperienceService = async (token, experiences) => {
     },
   };
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/experiences/`, { experiences }, config);
+  const { data } = await axios.post('http://127.0.0.1:8000/profile/experiences/', { experiences }, config);
   return data;
 };
 
@@ -132,9 +130,10 @@ export const updateExperienceService = async (token, experienceData) => {
       'Content-Type': 'application/json',
     },
   };
-  const { data } = await axios.post(`${BASE_API_URL}/profile/experiences/`, experienceData, config);
+  const { data } = await axios.post(`http://127.0.0.1:8000/profile/experiences/`, experienceData, config);
   return data;
 };
+
 
 // Servicio para obtener la educación del perfil (GET)
 export const getEducationService = async (token) => {
@@ -145,7 +144,7 @@ export const getEducationService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/educations/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/educations/', config);
   return data;
 };
 
@@ -158,7 +157,7 @@ export const createEducationService = async (token, education) => {
     },
   };
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/educations/`, education, config);
+  const { data } = await axios.post('http://127.0.0.1:8000/profile/educations/', education , config);
   return data;
 };
 
@@ -171,9 +170,11 @@ export const updateEducationService = async (token, educationData) => {
     },
   };
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/educations/`, educationData, config);
+  // Envía los datos al backend
+  const { data } = await axios.post(`http://127.0.0.1:8000/profile/educations/`, educationData, config);
   return data;
 };
+
 
 // Servicio para obtener las calificaciones del perfil (GET)
 export const getRatingService = async (token) => {
@@ -184,7 +185,7 @@ export const getRatingService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/reviews/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/reviews/', config);
   return data;
 };
 
@@ -197,7 +198,7 @@ export const createRatingService = async (token, reviews) => {
     },
   };
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/reviews/`, { reviews }, config);
+  const { data } = await axios.post('http://127.0.0.1:8000/profile/reviews/', { reviews }, config);
   return data;
 };
 
@@ -210,7 +211,7 @@ export const updateReviewsService = async (token, reviewId, reviewsData) => {
     },
   };
 
-  const { data } = await axios.put(`${BASE_API_URL}/profile/reviews/${reviewId}/`, reviewsData, config);
+  const { data } = await axios.put(`http://127.0.0.1:8000/profile/reviews/${reviewId}/`, reviewsData, config);
   return data;
 };
 
@@ -223,11 +224,11 @@ export const updateImageService = async (token, images) => {
     },
   };
 
-  const { data } = await axios.put(`${BASE_API_URL}/profile/images/`, images, config);
+  const { data } = await axios.put('http://127.0.0.1:8000/profile/images/', images, config);
   return data;
 };
 
-// Servicio para obtener imágenes del perfil (GET)
+// Servicio para obtener imágenes del perfil (POST para nueva imagen)
 export const getImageService = async (token) => {
   const config = {
     headers: {
@@ -235,7 +236,7 @@ export const getImageService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/images/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/images/', config);
   return data;
 };
 
@@ -248,11 +249,10 @@ export const getPortfolioProjectsService = async (token) => {
     },
   };
 
-  const { data } = await axios.get(`${BASE_API_URL}/profile/portfolios/`, config);
+  const { data } = await axios.get('http://127.0.0.1:8000/profile/portfolios/', config);
   return data;
 };
 
-// Servicio para actualizar proyectos del portafolio (POST)
 export const updatePortfolioService = async (token, portfolioData) => {
   const config = {
     headers: {
@@ -260,21 +260,31 @@ export const updatePortfolioService = async (token, portfolioData) => {
     },
   };
 
+  // Crear un objeto FormData y agregar los campos
   const formData = new FormData();
   formData.append('title', portfolioData.title);
   formData.append('description', portfolioData.description);
   formData.append('project_url', portfolioData.project_url);
 
+  // Si hay una imagen, añádela al FormData
   if (portfolioData.image) {
     formData.append('image', portfolioData.image);
   }
 
-  const { data } = await axios.post(`${BASE_API_URL}/profile/portfolios/`, formData, config);
+
+  // Realizar la solicitud con formData
+  const { data } = await axios.post('http://127.0.0.1:8000/profile/portfolios/', formData , config);
+
   return data;
 };
 
-// Servicio para obtener el perfil público de un freelancer
 export const getUserProfileService = async (freelancerId) => {
-  const { data } = await axios.get(`${BASE_API_URL}/profile/public/${freelancerId}/`);
-  return data;
+  try {
+    const { data } = await axios.get(`http://127.0.0.1:8000/profile/public/${freelancerId}/`);
+    return data;
+  } catch (error) {
+    console.error('Error al obtener el perfil del freelancer:', error);
+    throw error;
+  }
 };
+

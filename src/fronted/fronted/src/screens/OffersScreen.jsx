@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getUserInfoService } from '@/service/userService';
-import { getProjectsByOwner } from '@/service/payingService';
+import {getProjectsByOwner } from '@/service/payingService';
 import OffersCard from '@/components/Offers/OffersCards'; 
 import { useNavigate } from 'react-router-dom';
 import ProjectService from '@/service/projectService';
@@ -14,14 +14,15 @@ const ApplicationsScreen = () => {
   const navigate = useNavigate();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 10; 
 
   const handleAcceptOffer = async (offer, project) => {
     try {
       offer.status = true;  
       offer.is_reviewed = true;
+      console.log(project.id, offer.id, offer)
       const response = await ProjectService.updateOffer(project.id, offer.id, offer);
-
+  
       const updatedProjects = projects.map(p => 
         p.id === project.id
           ? {
@@ -37,13 +38,13 @@ const ApplicationsScreen = () => {
       console.error('Error al aceptar la oferta:', error);
     }
   };
-
+  
   const handleRejectOffer = async (offer, project) => {
     try {
       offer.status = false;  
       offer.is_reviewed = true;
       const response = await ProjectService.updateOffer(project.id, offer.id, offer);  
-
+  
       const updatedProjects = projects.map(p => 
         p.id === project.id
           ? {
@@ -59,20 +60,22 @@ const ApplicationsScreen = () => {
       console.error('Error al rechazar la oferta:', error);
     }
   };
+  
 
   const handleUndoOffer = async (offer, project) => {
     try {
       offer.is_reviewed = false;
-      offer.status = null;
-
+      offer.status = null;  
+  
       const response = await ProjectService.updateOffer(project.id, offer.id, offer);
-
+  
       const updatedProjects = projects.map(p =>
         p.id === project.id
           ? { ...p, offers: p.offers.map(o => (o.id === offer.id ? offer : o)) }
           : p
       );
       setProjects(updatedProjects); 
+  
     } catch (error) {
       console.error('Error al deshacer la oferta:', error);
     }
@@ -117,6 +120,7 @@ const ApplicationsScreen = () => {
     ? selectedProject.offers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
     : [];
 
+  // Separamos las ofertas en no revisadas y revisadas
   const offersUnreviewed = currentOffers.filter(offer => !offer.is_reviewed);
   const offersReviewed = currentOffers.filter(offer => offer.is_reviewed);
 
@@ -127,11 +131,10 @@ const ApplicationsScreen = () => {
   return (
     <div className="flex justify-center min-h-screen bg-zinc-950 p-4 sm:p-6 lg:p-8">
       <div className="relative flex flex-col w-full max-w-7xl bg-zinc-900 shadow-lg p-6 rounded-lg">
-        
         <div className="bg-zinc-800 p-4 rounded-lg mb-6">
           <h1 className="text-3xl font-bold text-white">Postulaciones</h1>
         </div>
-
+  
         {/* Selección de proyecto */}
         <div className="mb-6">
           <label htmlFor="projectSelect" className="text-gray-300 text-lg">Selecciona un proyecto:</label>
@@ -142,7 +145,7 @@ const ApplicationsScreen = () => {
               const selectedId = e.target.value;
               const project = projects.find(p => p.id === parseInt(selectedId, 10));
               setSelectedProject(project || null);
-              setCurrentPage(1);
+              setCurrentPage(1); // Resetear la página al seleccionar un nuevo proyecto
             }}
           >
             <option value="">-- Selecciona un proyecto --</option>
@@ -153,17 +156,18 @@ const ApplicationsScreen = () => {
             ))}
           </select>
         </div>
-
+  
         <div className="flex flex-col md:flex-row w-full mt-6 space-y-6 md:space-y-0 md:space-x-8">
+          {/* Mostrar Gestionar Postulaciones si es owner */}
           {isOwner ? (
             <div className="w-full md:w-2/3 space-y-6">
               <h2 className="text-2xl font-semibold text-white mb-4">Gestionar Postulaciones</h2>
               {selectedProject ? (
                 <>
-                  <h3 className="text-xl font-semibold text-white">{selectedProject.title}</h3>
-                  <div className="flex flex-col space-y-6">
+                  <h3 className="text-xl font-semibold text-gray-300">{selectedProject.title}</h3>
+                  <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row space-y-6 sm:space-y-0 sm:space-x-6 lg:space-x-8">
                     <div className="bg-zinc-800 p-6 shadow-md rounded-lg">
-                      <h4 className="text-lg font-semibold text-white">Ofertas No Revisadas</h4>
+                      <h4 className="text-lg font-semibold text-gray-300">Ofertas No Revisadas</h4>
                       {offersUnreviewed.length > 0 ? (
                         offersUnreviewed.map((offer) => (
                           <OffersCard
@@ -182,17 +186,21 @@ const ApplicationsScreen = () => {
                       )}
                     </div>
                     <div className="bg-zinc-800 p-6 shadow-md rounded-lg">
-                      <h4 className="text-lg font-semibold text-white">Ofertas Revisadas</h4>
+                      <h4 className="text-lg font-semibold text-gray-300">Ofertas Revisadas</h4>
                       {offersReviewed.length > 0 ? (
                         offersReviewed.map((offer) => (
-                          <OffersCard
-                            key={offer.id}
-                            offer={offer}
-                            project={selectedProject}
-                            isOwner={true}
-                            undoOffer={handleUndoOffer}
-                            showAcceptRejectButtons={false}
-                          />
+                          <div key={offer.id} className="flex justify-between items-center">
+                            <OffersCard
+                              offer={offer}
+                              project={selectedProject}
+                              isOwner={true}
+                              onAccept={handleAcceptOffer}
+                              onReject={handleRejectOffer}
+                              onViewProfile={handleViewProfile}
+                              undoOffer={handleUndoOffer}
+                              showAcceptRejectButtons={false}
+                            />
+                          </div>
                         ))
                       ) : (
                         <p className="text-gray-400">No hay ofertas revisadas.</p>
@@ -207,7 +215,7 @@ const ApplicationsScreen = () => {
                   />
                 </>
               ) : (
-                <p className="text-gray-500">No se ha seleccionado un proyecto aún.</p>
+                <p className="text-gray-400">No se ha seleccionado un proyecto aún.</p>
               )}
             </div>
           ) : (
@@ -216,7 +224,7 @@ const ApplicationsScreen = () => {
                 <h2 className="text-2xl font-semibold text-white mb-4">Historial de Postulaciones</h2>
                 {selectedProject ? (
                   <>
-                    <h3 className="text-xl font-semibold text-white">{selectedProject.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-300">{selectedProject.title}</h3>
                     {currentOffers.length > 0 ? (
                       currentOffers.map((offer) => (
                         <OffersCard
@@ -237,7 +245,7 @@ const ApplicationsScreen = () => {
                     />
                   </>
                 ) : (
-                  <p className="text-gray-500">No se ha seleccionado un proyecto aún.</p>
+                  <p className="text-gray-400">No se ha seleccionado un proyecto aún.</p>
                 )}
               </div>
             </div>
@@ -260,9 +268,7 @@ const Pagination = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => 
         <button
           key={i + 1}
           onClick={() => onPageChange(i + 1)}
-          className={`px-4 py-2 rounded-md ${
-            i + 1 === currentPage ? 'bg-blue-500 text-white' : 'bg-zinc-700 text-gray-300'
-          }`}
+          className={`px-4 py-2 rounded-md ${i + 1 === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'}`}
         >
           {i + 1}
         </button>
