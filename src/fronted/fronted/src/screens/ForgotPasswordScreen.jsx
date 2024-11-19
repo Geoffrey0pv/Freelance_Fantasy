@@ -60,9 +60,9 @@ const ForgotPasswordScreen = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               ¿Recuerdas tu contraseña?{' '}
-              <a href="/login" className="text-blue-500 hover:underline">
+              <Link href="/login" className="text-blue-500 hover:underline">
                 Inicia sesión aquí
-              </a>
+              </Link>
             </p>
           </div>
         </div>

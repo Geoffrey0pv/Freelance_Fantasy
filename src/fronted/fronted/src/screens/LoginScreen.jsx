@@ -63,11 +63,10 @@ const LoginScreen = () => {
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">¡Te extrañábamos!</h1>
           <p className="text-gray-600 mb-8 text-sm md:text-base">
             Si aún no tienes una cuenta,{" "}
-            <a href="/register" className="text-blue-500 hover:underline">
+            <Link to="/register" className="text-blue-500 hover:underline">
               Regístrate aquí!
-            </a>
+            </Link>
           </p>
-
           <form onSubmit={handleLogin} className="space-y-4">
             <InputField
               label="Usuario"

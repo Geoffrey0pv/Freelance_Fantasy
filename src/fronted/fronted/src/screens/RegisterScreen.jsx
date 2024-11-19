@@ -75,9 +75,9 @@ const RegisterScreen = () => {
                 </h1>
                 <p className="text-xs sm:text-sm text-gray-600 mb-4">
                     Si ya tienes una cuenta,{' '}
-                    <a href="/login" className="text-blue-500 hover:underline">
+                    <Link href="/login" className="text-blue-500 hover:underline">
                         inicia sesión aquí
-                    </a>.
+                    </Link>.
                 </p>
                 <form onSubmit={handleRegister} className="space-y-2 sm:space-y-3">
                     <InputField
