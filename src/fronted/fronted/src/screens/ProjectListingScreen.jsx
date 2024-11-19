@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchProjectsBar from '../components/ListingProjects/SearchProjectsBar';
 import FiltersDropdown from '../components/ListingProjects/FiltersDropdown';
-import ProjectCard from '../components/ListingProjects/ProjectCard';
+import ProjectCard from '../components/ListingProjects/projectCard';
 import Pagination from '../components/ListingFreelancers/Pagination';
 import { getUserInfoService } from '@/service/userService';
 import ProjectService from '@/service/projectService';
