@@ -2,12 +2,12 @@ import { useState } from 'react';
 import Globe from 'react-globe.gl';
 import React from 'react';
 import Button from './components/button.jsx';
-import grid1 from './assets/grid1.png';
-import grid2 from './assets/grid2.png';
-import grid3 from './assets/grid3.png';
-import grid4 from './assets/grid4.png';
-import tickIcon from './assets/tick.svg';
-import copyIcon from './assets/copy.svg';
+import grid1 from '../../assets/grid1.png';
+import grid2 from '../../assets/grid2.png';
+import grid3 from '../../assets/grid3.png';
+import grid4 from '../../assets/grid4.png';
+import tickIcon from '../../assets/tick.svg';
+import copyIcon from '../../assets/copy.svg';
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false);
