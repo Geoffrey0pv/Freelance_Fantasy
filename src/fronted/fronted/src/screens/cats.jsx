@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 
 const Cats = () => {
   const groupRef = useRef();
-  const gltf = useGLTF("../public/book_model/scene.gltf");
+  const gltf = useGLTF("/public/book_model/scene.gltf");
 
   // Variable para controlar el tiempo y la velocidad de la flotación
   let floatSpeed = 0.5; // Ajusta este valor para cambiar la velocidad de la flotación

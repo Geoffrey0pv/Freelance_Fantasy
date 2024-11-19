@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Wizard = () => {
-  const Wizard = useGLTF("../public/scene.gltf");
+  const Wizard = useGLTF("/public/scene.gltf");
 
   return (
     <primitive object={Wizard.scene} scale={2.5} position-y={-2.5} position-x={-0.5} rotation-y={-1} />

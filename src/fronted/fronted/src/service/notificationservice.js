@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { BASE_API_URL } from './apiConfig';
 
-const API_URL = 'http://127.0.0.1:8000/notifications/';
+const API_URL = `${BASE_API_URL}/notifications/`;
 
 // Obtener todas las notificaciones del usuario autenticado
 export const getNotifications = async (token) => {
@@ -19,7 +20,7 @@ export const getNotifications = async (token) => {
 };
 
 const axiosInstance = axios.create({
-    baseURL: 'http://127.0.0.1:8000',
+    baseURL: BASE_API_URL,
 });
 
 // Marcar una notificación como leída

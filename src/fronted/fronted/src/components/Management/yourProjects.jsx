@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listOwnedProjects, listWorkingProjects } from '../../redux/actions/projectActions.js';
 import { Separator } from '../ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ManagementCard from './ManagementCard';
+import ManagementCard from './ManagementCard.jsx';
 import { useNavigate } from 'react-router-dom';
-import { CreateProjectForm } from './CreateProjectForm'; 
+import { CreateProjectForm } from './CreateProjectForm.jsx'; 
 
 const YourProjects = () => {
     const navigate = useNavigate();
