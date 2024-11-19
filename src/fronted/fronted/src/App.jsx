@@ -42,7 +42,7 @@ function AppContent({ userInfo }) {
                 {showSidebar && <Sidebar id="sidebar" className="w-64" />}
                 <div className="flex-grow">
                     <Routes>
-                        <Route path="/home" element={<HomeScreen />} />
+                        <Route path="" element={<HomeScreen />} />
                         <Route path="/about" element={<AboutScreen />} />
                         <Route path="/login" element={<LoginScreen />} />
                         <Route path="/forgot-password" element={<ForgotPasswordScreen />} />
