@@ -8,6 +8,8 @@ import PasswordStrengthBar from 'react-password-strength-bar';
 import GoogleLoginButton from '../components/Login/GoogleLoginButton.jsx';
 import { registerRequest } from '../redux/actions/userActions.js';
 import WizardCanvas from '../components/Canvas/Wizard.jsx'; // Import your 3D model component
+import { Link } from "react-router-dom";
+
 
 const RegisterScreen = () => {
     const [name, setName] = useState('');

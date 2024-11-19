@@ -3,6 +3,7 @@ import InputField from '../components/General/InputField.jsx'; // Componente reu
 import Button from '../components/General/Button.jsx'; // Botón reutilizable
 import WizardCanvas from '../components/Canvas/Wizard.jsx'; // Figura 3D
 import { sendPasswordResetEmail } from '@/service/userService'; // Asegúrate de tener esta función implementada correctamente
+import { Link } from "react-router-dom";
 
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
