@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ title, description = '', bannerUrl, tags = [], onMoreInfoClick }) => {
-    const baseUrl = "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net"; // Define la base URL
+    const baseUrl = "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net/"; // Define la base URL
     console.log(bannerUrl);
     return (
         <Card className="bg-white text-black-100 shadow-md hover:shadow-lg transition-shadow">
