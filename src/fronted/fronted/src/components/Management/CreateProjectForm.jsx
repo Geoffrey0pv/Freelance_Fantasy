@@ -11,7 +11,7 @@ import { createProject } from "../../redux/actions/projectActions";
 const FormSchema = z.object({
     title: z.string().min(3, "El título es obligatorio"),
     description: z.string().min(10, "La descripción es obligatoria"),
-    requirements: z.string().min(3, "Los requisitos son obligatorios"), // Validación añadida para requisitos
+    requirements: z.string().min(3, "Los requisitos son obligatorios"),
     location: z.string().min(3, "La ubicación es obligatoria"),
     budget: z.preprocess((value) => parseFloat(value), z.number().positive("El presupuesto debe ser un número positivo")),
     photo: z.instanceof(File, "Debe seleccionar una imagen válida"),
@@ -21,10 +21,10 @@ const FormSchema = z.object({
 export function CreateProjectForm() {
     const dispatch = useDispatch();
     const [selectedFileName, setSelectedFileName] = useState("");
-    const [notification, setNotification] = useState(""); // Notificación global para el formulario
+    const [notification, setNotification] = useState("");
     const { register, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm({
         resolver: zodResolver(FormSchema),
-        mode: "onSubmit", // Validación solo al enviar
+        mode: "onSubmit",
     });
 
     const onSubmit = (data) => {
@@ -58,30 +58,31 @@ export function CreateProjectForm() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <Input {...register("title")} placeholder="Título del Proyecto" />
+            <Input {...register("title")} placeholder="Título del Proyecto" className="text-black" />
             {errors.title && <p className="text-red-500">{errors.title.message}</p>}
 
-            <Textarea {...register("description")} placeholder="Descripción del Proyecto" />
+            <Textarea {...register("description")} placeholder="Descripción del Proyecto" className="text-black" />
             {errors.description && <p className="text-red-500">{errors.description.message}</p>}
 
-            <Textarea {...register("requirements")} placeholder="Requisitos del Proyecto" />
+            <Textarea {...register("requirements")} placeholder="Requisitos del Proyecto" className="text-black" />
             {errors.requirements && <p className="text-red-500">{errors.requirements.message}</p>}
 
-            <Input {...register("location")} placeholder="Ubicación" />
+            <Input {...register("location")} placeholder="Ubicación" className="text-black" />
             {errors.location && <p className="text-red-500">{errors.location.message}</p>}
 
-            <Input {...register("budget")} type="number" placeholder="Presupuesto" step="0.01" />
+            <Input {...register("budget")} type="number" placeholder="Presupuesto" step="0.01" className="text-black" />
             {errors.budget && <p className="text-red-500">{errors.budget.message}</p>}
 
-            <Input {...register("tags")} placeholder="Tags (separados por comas)" />
+            <Input {...register("tags")} placeholder="Tags (separados por comas)" className="text-black" />
 
             <Input
                 type="file"
                 accept="image/*"
+                className="text-black"
                 onChange={(e) => {
-                    const file = e.target.files[0]; // Obtener el primer archivo seleccionado
-                    setSelectedFileName(file ? file.name : ""); // Mostrar el nombre del archivo
-                    setValue("photo", file); // Almacena el objeto File directamente en el estado del formulario
+                    const file = e.target.files[0];
+                    setSelectedFileName(file ? file.name : "");
+                    setValue("photo", file);
                 }}
             />
             {errors.photo && <p className="text-red-500">{errors.photo.message}</p>}
@@ -89,7 +90,6 @@ export function CreateProjectForm() {
 
             <Button type="submit" disabled={isSubmitting}>Crear Proyecto</Button>
 
-            {/* Mostrar mensajes de notificación global */}
             {notification && (
                 <p className={`mt-4 text-center ${errors.length > 0 ? "text-red-500" : "text-green-500"}`}>
                     {notification}
