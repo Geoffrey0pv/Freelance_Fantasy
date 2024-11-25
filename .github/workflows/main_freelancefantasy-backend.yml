@@ -44,7 +44,7 @@ jobs:
       - name: Zip artifact for deployment
         run: | 
           cd src/backend/Backend 
-          zip release.zip ./* -r
+          zip -r release.zip ./* -x "*.git*" -x "venv/*" -x "*.env" -x "build/*" -x "dist/*"
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
