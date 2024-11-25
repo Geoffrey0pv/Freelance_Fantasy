@@ -8,6 +8,8 @@ const initialState = {
   freelancers: [],
   loading: false,
   error: null,
+  page: 1,
+  pages: 1,
 };
 
 export const freelancersListReducer = (state = initialState, action) => {
@@ -18,7 +20,9 @@ export const freelancersListReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        freelancers: action.payload,
+        freelancers: action.payload.freelancers,
+        page: action.payload.page,
+        pages: action.payload.pages,
       };
     case FREELANCERS_LIST_FAIL:
       return { ...state, loading: false, error: action.payload };
@@ -26,3 +30,4 @@ export const freelancersListReducer = (state = initialState, action) => {
       return state;
   }
 };
+

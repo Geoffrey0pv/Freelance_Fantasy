@@ -2,18 +2,19 @@ import {
   FREELANCERS_LIST_REQUEST,
   FREELANCERS_LIST_SUCCESS,
   FREELANCERS_LIST_FAIL,
-} from '../../constants/freelancerConstants';
-import { 
-  getAllFreelancersService, 
-  getPublicImageService, 
-  getPublicReviewService 
-} from '../../service/freelancerService';
+} from "../../constants/freelancerConstants";
+import {
+  getAllFreelancersService,
+  getPublicImageService,
+  getPublicReviewService,
+} from "../../service/freelancerService";
 
-export const listFreelancers = () => async (dispatch) => {
+export const listFreelancers = (pageNumber = 1) => async (dispatch) => {
   try {
     dispatch({ type: FREELANCERS_LIST_REQUEST });
 
-    const freelancers = await getAllFreelancersService();
+    // Obtener freelancers para la página actual
+    const { freelancers, pages, page } = await getAllFreelancersService(pageNumber);
 
     const detailedFreelancers = await Promise.all(
       freelancers.map(async (freelancer) => {
@@ -22,19 +23,22 @@ export const listFreelancers = () => async (dispatch) => {
           getPublicReviewService(freelancer.id),
         ]);
 
-        const averageRating = reviews.length 
-          ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length 
+        const averageRating = reviews.length
+          ? reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
           : 0;
 
         return {
           ...freelancer,
-          profile_image: imageData?.profile_image || '', // Mapeo correcto aquí
+          profile_image: imageData?.profile_image || "",
           rating: averageRating,
         };
       })
     );
 
-    dispatch({ type: FREELANCERS_LIST_SUCCESS, payload: detailedFreelancers });
+    dispatch({
+      type: FREELANCERS_LIST_SUCCESS,
+      payload: { freelancers: detailedFreelancers, pages, page },
+    });
   } catch (error) {
     dispatch({
       type: FREELANCERS_LIST_FAIL,

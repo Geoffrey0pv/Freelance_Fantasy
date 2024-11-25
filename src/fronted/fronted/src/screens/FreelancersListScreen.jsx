@@ -1,4 +1,3 @@
-// src/screens/FreelancersListScreen.jsx
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listFreelancers } from "../redux/actions/freelancerActions";
@@ -19,8 +18,12 @@ const FreelancersListScreen = () => {
   const { userInfo } = userLogin;
 
   useEffect(() => {
-    dispatch(listFreelancers());
+    dispatch(listFreelancers(1)); // Cargar la primera página al inicio
   }, [dispatch]);
+
+  const handlePageChange = (newPage) => {
+    dispatch(listFreelancers(newPage));
+  };
 
   const handleViewMore = (freelancerId) => {
     if (userInfo) {
@@ -59,6 +62,7 @@ const FreelancersListScreen = () => {
       <Pagination
         currentPage={page || 1}
         totalPages={pages || 1}
+        onPageChange={handlePageChange}
         className="py-4"
       />
     </div>

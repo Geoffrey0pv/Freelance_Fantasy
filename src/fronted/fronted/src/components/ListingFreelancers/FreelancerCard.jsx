@@ -1,7 +1,7 @@
 import React from "react";
 
 const FreelancerCard = ({ freelancer, onViewMore }) => {
-  const baseUrl = "http://127.0.0.1:8000"; // Define la base URL
+  const baseUrl = "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net"; // Define la base URL
 
   return (
     <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center transition-transform hover:scale-105">

@@ -99,8 +99,8 @@ const About = () => {
                 <div className="xl:col-span-1 xl:row-span-2">
                     <div className="grid-container">
                         <img
-                            src="/assets/grid4.png"
-                            alt={grid4}
+                            src={grid4}
+                            alt="grid-4"
                             className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
                         />
 
@@ -108,7 +108,7 @@ const About = () => {
                             <p className="grid-subtext text-center">Contáctanos</p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">contacto@freelancefantasy.dev</p>
+                                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">freelancefantasygroup@gmail.com</p>
                             </div>
                         </div>
                     </div>

@@ -13,8 +13,10 @@ export const getPublicReviewService = async (userId) => {
   return data;
 };
 
-// Obtener lista básica de freelancers
-export const getAllFreelancersService = async () => {
-  const { data } = await axios.get(`${BASE_API_URL}/users/freelancers/all/`);
-  return data;
+export const getAllFreelancersService = async (pageNumber = 1) => {
+  const { data } = await axios.get(
+    `${BASE_API_URL}/users/freelancers/all/?page=${pageNumber}&limit=10`
+  );
+  return data; // Se espera que `data` incluya `freelancers`, `pages`, y `page`.
 };
+

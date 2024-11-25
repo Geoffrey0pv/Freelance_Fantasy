@@ -22,8 +22,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.utils import timezone
 from datetime import timedelta
-
-
+from rest_framework.pagination import PageNumberPagination
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -228,10 +227,16 @@ class GetUserProfileView(APIView):
         serializer = UserSerializer(user)  # Utilizamos el UserSerializer para excluir la contraseña
         return Response(serializer.data, status=200)
     
+class FreelancerPagination(PageNumberPagination):
+    page_size = 10
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
 class BasicFreelancerListView(ListAPIView):
     queryset = User.objects.filter(is_freelancer=True)
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+    pagination_class = FreelancerPagination
 
 class UpdateUserRolesView(UpdateAPIView):
     queryset = User.objects.all()

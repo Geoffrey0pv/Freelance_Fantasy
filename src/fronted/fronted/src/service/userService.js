@@ -8,7 +8,6 @@ export const loginService = async (username, password) => {
             'Content-Type': 'application/json',
         },
     };
-s
     try {
         const { data } = await axios.post(
             `${BASE_API_URL}/users/login/`,

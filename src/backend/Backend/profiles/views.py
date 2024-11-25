@@ -9,8 +9,6 @@ from rest_framework.views import APIView
 from notifications.models import Notification
 from notifications.serializers import NotificationSerializer
 
-
-
 class SkillViewSet(viewsets.ModelViewSet):
     serializer_class = SkillSerializer
     permission_classes = [IsAuthenticated]
