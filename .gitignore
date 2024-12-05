@@ -1,8 +1,11 @@
-
-/src/fronted/fronted/node_modules
+/src/fronted/fronted/node_modules/
 /node_modules
 /node_modules/which
-/node_modules
+node_modules/
+npm-debug.log*
+yarn-error.log*
+dist/
+build/
 
 
 *.pyc

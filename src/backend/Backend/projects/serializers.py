@@ -43,6 +43,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     milestones = MilestoneSerializer(many=True, read_only=True)
     offers = OfferSerializer(many=True, read_only=True)
     tags = TagSerializer(many=True, read_only=True)
+    photo = serializers.ImageField(allow_null=True, required=False)
 
     class Meta:
         model = Project

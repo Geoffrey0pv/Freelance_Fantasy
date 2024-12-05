@@ -33,7 +33,7 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', 'freelancefantasy-backend-dfbte3d4f0csd5bc.azurewebsites.net']
 
 # Application definition
 
@@ -158,7 +158,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'MyrtileBack.wsgi.application'
-
 ASGI_APPLICATION = 'MyrtileBack.asgi.application'
 
 
