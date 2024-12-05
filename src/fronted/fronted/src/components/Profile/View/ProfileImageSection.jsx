@@ -2,9 +2,11 @@ import React from 'react';
 
 const ViewProfileImageSection = ({ profileImage, coverImage }) => {
   const baseUrl = "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net"; // Define la base URL
-  const cleanedBannerUrl1 = profileImage ? profileImage.replace("users/profile/", "") : "";
-  const cleanedBannerUrl2 = coverImage ? coverImage.replace("users/profile/", "") : ""; 
-  
+  const cleanedBannerUrl1 = profileImage ? `${baseUrl}${profileImage}` : "";
+  const cleanedBannerUrl2 = coverImage ? `${baseUrl}${coverImage}` : "";
+  console.log(cleanedBannerUrl1);
+  console.log(cleanedBannerUrl2);
+
   return (
     <div className="relative w-full h-48 bg-gray-300 rounded-lg shadow-lg">
       {coverImage ? (

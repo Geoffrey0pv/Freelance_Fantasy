@@ -7,15 +7,14 @@ import { Separator } from "@/components/ui/separator";
 // eslint-disable-next-line react/prop-types
 const ProjectCard = ({ title, description = '', bannerUrl, tags = [], onMoreInfoClick }) => {
     const baseUrl = "https://freelancefantasy-backend-dfbte3d4f0csd5bc.westus-01.azurewebsites.net/"; // Define la base URL
-    const cleanedBannerUrl = bannerUrl.replace("users/profile/", "");
-
-    console.log(bannerUrl);
+    const image = `${baseUrl}${bannerUrl}`
+    console.log(image);
     return (
         <Card className="bg-white text-black-100 shadow-md hover:shadow-lg transition-shadow">
             {/* Imagen del proyecto */}
             <CardHeader>
                 <div className="w-full h-48 overflow-hidden rounded-md">
-                    <img src={cleanedBannerUrl} alt={title} className="object-cover w-full h-full" />
+                    <img src={image} alt={title} className="object-cover w-full h-full" />
                 </div>
                 <CardTitle className="mt-4 text-center text-lg">{title}</CardTitle>
             </CardHeader>
