@@ -9,6 +9,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
+  build: {
+    outDir: 'dist',
+  },
   css: {
     postcss: {
       plugins: [tailwindcss()],
@@ -25,3 +28,4 @@ export default defineConfig({
     },
   },
 });
+
