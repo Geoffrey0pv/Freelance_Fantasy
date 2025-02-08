@@ -2,6 +2,9 @@
 
 The MYRTILLE project is a platform that connects clients with freelancers specialized in software development. It facilitates collaboration between both, allowing clients to find the right talent for their projects and freelancers to gain job opportunities in their area of expertise.
 
+🚀 **¡Ya puedes probar la aplicación en producción!**  
+👉 [FreelanceFantasy en Producción](https://freelancefantasy.netlify.app)
+
 
 ## **Development team**
   - Juan Camilo Tobar Morales - A00399905
